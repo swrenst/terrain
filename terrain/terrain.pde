@@ -65,6 +65,7 @@ void draw() {
   translate(-w/2, -h/2);
   for (int y = 0; y < rows-1; y++) {
     
+    //strokeWeight(map(y, 0, rows-1, .0001, 1.5));
     beginShape(TRIANGLE_STRIP);
     for (int x = 0; x < cols; x++) {
       
