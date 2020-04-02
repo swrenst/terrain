@@ -29,12 +29,25 @@ void setup() {
   terrain = new float[cols][rows];
   
   oscP5 = new OscP5(this, 12010);
+  oscP5Send = new OscP5(this, 12011);
 }
 
 void calculateStretch(){
   //stretchMin = -stretchFactor;
   stretchMax = map(stretchFactor, 35, 400, 10, 300);
   stretchMin = -stretchMax;
+}
+
+void sendPerlinNoise(float x, float y, float z) {
+  OscMessage myMessage = new OscMessage("/perlin");
+  
+  // sends the the coordinates of the perlin nosie
+  myMessage.add(x);
+  myMessage.add(y);
+  myMessage.add(z);
+  
+  /* send the message */
+  oscP5Send.send(myMessage, "127.0.0.1", 12011);
 }
 
 
@@ -50,6 +63,9 @@ void draw() {
     float xoff = 0;
     for (int x = 0; x < cols; x++) {
       terrain[x][y] = map(noise(xoff, yoff), 0, 1, stretchMin, stretchMax);
+      
+      //sendPerlinNoise(x, y, terrain[x][y]);
+      
       xoff += 0.2;
     }
     yoff += 0.2;
