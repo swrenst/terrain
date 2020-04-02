@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 0.0, -26.0, 640.0, 506.0 ],
+		"rect" : [ 34.0, 79.0, 640.0, 506.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,56 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 348.0, 284.0, 150.0, 20.0 ],
+					"text" : "The pfft~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"linecount" : 8,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 375.0, 439.0, 150.0, 114.0 ],
+					"presentation_linecount" : 8,
+					"text" : "The poke~ object writes samples to the buffer by bin index. The metro object is randomly sending values from the range slider to the poke object, which adds values to the buffer."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "slider",
+					"min" : 40.0,
+					"mult" : 10.0,
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 726.692460712400589, 309.756014227867126, 178.762877702713013, 33.814438939094543 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_shortname" : "slider",
+							"parameter_type" : 1,
+							"parameter_longname" : "slider[1]",
+							"parameter_mmax" : 96.0
+						}
+
+					}
+,
+					"size" : 97.0,
+					"varname" : "slider[1]"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-98",
 					"maxclass" : "button",
@@ -74,10 +124,10 @@
 					"patching_rect" : [ 513.692460712400589, 34.309304237365723, 178.762877702713013, 33.814438939094543 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 96.0,
 							"parameter_shortname" : "slider",
 							"parameter_type" : 1,
-							"parameter_longname" : "slider"
+							"parameter_longname" : "slider",
+							"parameter_mmax" : 96.0
 						}
 
 					}
@@ -153,7 +203,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1518.556615948677063, 245.659749627113342, 50.0, 35.0 ],
-					"presentation_linecount" : 2,
 					"text" : "51.77349"
 				}
 
@@ -179,7 +228,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1261.855599403381348, 245.659749627113342, 50.0, 35.0 ],
-					"presentation_linecount" : 2,
 					"text" : "300.034329"
 				}
 
@@ -931,8 +979,8 @@
 					"id" : "obj-54",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 6,
-					"outlettype" : [ "", "", "", "", "", "" ],
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 1050.609258744537328, 114.082472205162048, 121.339140799224879, 24.0 ],
 					"text" : "leapmotion",
 					"textcolor" : [ 0.030743, 0.650242, 0.000396, 1.0 ]
@@ -996,8 +1044,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 179.896905541419983, 344.010305994783266, 150.0, 74.0 ],
-					"presentation_linecount" : 5,
+					"patching_rect" : [ 163.396905541419983, 395.010305994783266, 150.0, 74.0 ],
 					"text" : "Tutorial credit: https://www.youtube.com/watch?v=qkT2il6UiYw&list=PLD45EDA6F67827497&index=72"
 				}
 
@@ -1005,12 +1052,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-52",
-					"linecount" : 5,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 24.742266654968262, 52.47423148155211, 111.010305523872375, 74.0 ],
-					"presentation_linecount" : 3,
+					"patching_rect" : [ 24.742266654968262, 52.47423148155211, 114.0, 60.0 ],
 					"text" : "This slider changes the amount of noise that is added to the fft sounds"
 				}
 
@@ -1023,7 +1069,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 691.381438851356506, 223.467352151870728, 238.659788846969604, 47.0 ],
-					"presentation_linecount" : 5,
 					"text" : "This slider changes the range from which the random object chooses, changing the pitch of the soudns"
 				}
 
@@ -1317,12 +1362,12 @@
 					"patching_rect" : [ 101.333336353302002, 450.02061665058136, 48.0, 136.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 6.0,
 							"parameter_shortname" : "live.gain~",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4,
 							"parameter_mmin" : -70.0,
-							"parameter_longname" : "live.gain~"
+							"parameter_longname" : "live.gain~",
+							"parameter_mmax" : 6.0
 						}
 
 					}
@@ -1375,7 +1420,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 6,
 					"outlettype" : [ "float", "float", "float", "float", "list", "" ],
-					"patching_rect" : [ 281.202749013900757, 482.762887358665466, 256.0, 64.0 ]
+					"patching_rect" : [ 339.609971221891556, 579.762887358665466, 256.0, 64.0 ]
 				}
 
 			}
@@ -1535,6 +1580,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-22", 1 ],
 					"source" : [ "obj-27", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-36", 1 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -1821,8 +1873,9 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-12" : [ "live.gain~", "live.gain~", 0 ],
 			"obj-94" : [ "slider", "slider", 0 ],
+			"obj-12" : [ "live.gain~", "live.gain~", 0 ],
+			"obj-3" : [ "slider[1]", "slider", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -1831,14 +1884,10 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "pfft-rain.maxpat",
-				"bootpath" : "~/Documents/School/Indie/terrain",
+				"bootpath" : "~/Documents/School/Indie/terrain/rain",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "leapmotion.mxo",
-				"type" : "iLaX"
 			}
  ],
 		"autosave" : 0
